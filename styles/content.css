@@ -1,0 +1,112 @@
+:root {
+  --color-primary: #0ea5e9;
+  --color-secondary: #f0f9ff;
+  --color-tertiary: #075985;
+  --color-bg: #FFFFFF;
+  --color-bg-secondary: #E2E8F0;
+  --card-font-color: #636363;
+  --card-border-radius: 8px;
+  --card-box-shadow: 6px 7px 6px -4px rgba(0,0,0,0.46);
+  --card-padding: 15px 25px;
+}
+
+#content {
+  display: grid;
+  padding: 30px 15px;
+  grid-template-columns: 3fr 1fr;
+}
+
+#projects-title, #announcements-title, #trending-title {
+  margin-bottom: 10px;
+}
+
+#projects {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 15px;
+  grid-column: 1;
+}
+
+.project {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column nowrap;
+  background-color: var(--color-bg);
+  flex-basis: calc(50% - 15px);
+  height: 165px;
+  box-shadow: var(--card-box-shadow);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  border-left: 8px solid var(--color-tertiary);
+
+  .title {
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+    color: var(--card-font-color);
+  }
+
+  .icons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+}
+
+#projects-title, #announcements-title, #trending-title {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#announcements {
+  background-color: var(--color-bg);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-box-shadow);
+  padding: var(--card-padding);
+  margin-bottom: 28px;
+}
+
+.announcement {
+  > div:first-child {
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+
+  > div:nth-child(2) {
+    font-size: 0.6rem;
+    color: var(--card-font-color);
+  }
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #d4d2d2;
+  margin: 1em 0;
+  padding: 0; 
+}
+
+#trending {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 15px;
+  background-color: var(--color-bg);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-box-shadow);
+  padding: var(--card-padding);
+  font-size: 0.7rem;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  div > div:nth-child(2) {
+    color: var(--card-font-color);
+  }
+}
